@@ -5,7 +5,17 @@
 html, body{
     margin: 0px;
     padding: 0px;
+    color: blueviolet;
 }
+
+a{
+    color: blueviolet;
+    text-decoration: none;
+}
+
+/* a:visited{
+
+} */
 
 
 .grid-container{
@@ -13,20 +23,22 @@ html, body{
     width: 100vw;
     height: 100vw;
     display: grid;
-    grid-template-columns: repeat(6, 1fr) ;
-    grid-template-rows: repeat(6, 1fr) ;
+    grid-template-columns: 1fr 2fr 2fr 2fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr 2fr 2fr 1fr ;
     grid-template-areas:
     ". . . . . ."
     ". . . a1 . ." 
-    ". a4 a4 a1. ." 
-    ". . a3 a2 a2." 
+    ". a4 a4 a1 . ." 
+    ". . a3 a2 a2 ." 
     ". . a3 . . ." 
     ". . . . . .";
 }
 
 .arm{
     border: 1px solid red;
-    justify-items: stretch;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .a1{
@@ -53,19 +65,23 @@ html, body{
 }
 
 .arm-img{
-    width: 16.66vw;
-    height: 16.66vw;
+    width: 15vw;
+    height: 15vw;
     border: 1px solid green;
 }
 
 .arm-text{
-    width: 16.66vw;
-    height: 16.66vw;
+    background-color: blue;
+    color: white;
+    width: 15vw;
+    height: 15vw;
     border: 1px solid yellow;
     display: flex;
     align-items: center;
     text-align: center;
     padding: 8px;
+    overflow: auto;
+
 }
 
 @media only screen and (max-width: 1000px) {
@@ -122,4 +138,12 @@ html, body{
     .arm{
         flex-direction: column;
     }
+}
+
+.super-link{
+    color: crimson;
+    font-size: large;
+    text-decoration: none;
+    font-weight: bolder;
+    text-transform: uppercase;
 }
